@@ -1,0 +1,36 @@
+models:
+  Travail:
+    matricule: string:250
+    titre: string:250
+    categorie: string:250
+    annee_academique: string:250
+    code_classification: string:250
+    nbre_pages: string:250
+    viewCount: decimal:8,2 default:0
+    path: string:250
+    domaine_id: id foreign
+    relationships:
+      belongsTo: Domaine
+
+
+  Domaine:
+    intitule: string:250
+    image: string:250
+    description: string :250
+    is_published: boolean
+    relationships:
+      HasMany: Travail
+
+  etudiant:
+    matricule: string:250
+    nom: string:250
+    postnom: string:250
+    prenom: string:250
+    faculte: string:250
+
+  Consultation:
+    user_id: id foreign
+    travail_id: id foreign
+
+
+
