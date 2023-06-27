@@ -20,6 +20,7 @@ class Etudiant extends Model
         'postnom',
         'prenom',
         'faculte',
+        'user_id'
     ];
 
     /**
@@ -29,5 +30,6 @@ class Etudiant extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'user_id' => 'integer',
     ];
 }

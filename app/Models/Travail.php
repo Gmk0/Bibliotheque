@@ -25,6 +25,8 @@ class Travail extends Model
         'viewCount',
         'path',
         'domaine_id',
+        'etudiant_id',
+        'publier',
     ];
 
     /**
@@ -41,5 +43,10 @@ class Travail extends Model
     public function domaine(): BelongsTo
     {
         return $this->belongsTo(Domaine::class);
+    }
+
+    public function etudiant(): BelongsTo
+    {
+        return $this->belongsTo(Etudiant::class);
     }
 }

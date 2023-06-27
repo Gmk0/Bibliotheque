@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::controller(HomeController::class)->group(function () {
+
+    Route::get('/', 'index')->name('Home');
+
+    Route::get('/domaines', 'index')->name('domaines');
+    Route::get('/travaux/{matricule}', 'voirTravail')->name('voirTravail');
 });
+
+Route::get('/travaux', \App\Http\Livewire\AllTravail::class)->name('travail');
+
+
+
 
 Route::middleware([
     'auth:sanctum',

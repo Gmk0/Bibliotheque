@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('path', 250);
             $table->foreignId('etudiant_id')->constrained();
             $table->foreignId('domaine_id')->constrained();
+            $table->boolean('publier')->default(0);
             $table->timestamps();
         });
 
