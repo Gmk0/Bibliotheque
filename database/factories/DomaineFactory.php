@@ -21,10 +21,10 @@ class DomaineFactory extends Factory
     public function definition(): array
     {
         return [
-            'intitule' => $this->faker->regexify('[A-Za-z0-9]{250}'),
-            'image' => $this->faker->regexify('[A-Za-z0-9]{250}'),
+            'intitule' => $this->faker->word(),
+            'image' => "images/categorie.png",
             'description' => $this->faker->text,
-            'is_published' => $this->faker->boolean,
+            'is_published' => true,
         ];
     }
 }

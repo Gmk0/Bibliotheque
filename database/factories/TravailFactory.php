@@ -34,10 +34,10 @@ class TravailFactory extends Factory
             'code_classification' =>
             $this->faker->bothify('?#?#?###'),
             'nbre_pages' => $this->faker->numberBetween(50, 90),
-            'viewCount' => $this->faker->randomFloat(2, 0, 999999.99),
+            'viewCount' => $this->faker->randomFloat(2, 0, 999),
             'path' => "/travail/tfc/travail.pdf",
-            'domaine_id' => $this->faker->numberBetween(1, 41),
-            'etudiant_id' => $this->faker->numberBetween(500, 800),
+            'domaine_id' => $this->faker->numberBetween(1, 20),
+            'etudiant_id' => $this->faker->numberBetween(1, 80),
         ];
     }
 
